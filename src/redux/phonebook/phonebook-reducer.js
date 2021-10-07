@@ -8,13 +8,13 @@ const filter = createReducer("", {
 });
 
 const items = createReducer([], {
-  [contactsActions.fetchContactsSuccess]: (_, action) => action.payload,
-  [contactsActions.postContactsSuccess]: (state, action) => [
+  [contactsActions.fetchContactsSuccess]: (_, { payload }) => payload,
+  [contactsActions.postContactsSuccess]: (state, { payload }) => [
     ...state,
-    action.payload,
+    payload,
   ],
-  [contactsActions.deleteContactsSuccess]: (state, action) =>
-    state.filter(({ id }) => id !== action.payload),
+  [contactsActions.deleteContactsSuccess]: (state, { payload }) =>
+    state.filter(({ id }) => id !== payload),
 });
 
 const isLoading = createReducer(false, {
