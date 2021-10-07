@@ -1,0 +1,19 @@
+{
+  "contacts": [
+    {
+      "id": "id-4",
+      "name": "Annie Copeland",
+      "number": "227-91-26"
+    },
+    {
+      "id": "8dda754f-5890-4c77-9bf9-17da2c7781d0",
+      "name": "olha",
+      "number": "380222222222"
+    },
+    {
+      "id": "e2a66b23-8e65-4cf8-9804-b87b8926d9e2",
+      "name": "Rosie Simpson",
+      "number": "380222222222"
+    }
+  ]
+}
