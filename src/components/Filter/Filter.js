@@ -1,12 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { useSelector, useDispatch } from "react-redux";
-import { filterItems } from "../../redux/phonebook/phonebookActions";
-import { getFilter } from "../../redux/phonebook/phonebook-selectors";
+import { contactsSelectors, contactsActions } from "redux/phonebook";
 import { ContactListWrapper, ContactListInput } from "./Filter.styled";
 
 export function Filter() {
-  const value = useSelector(getFilter);
+  const value = useSelector(contactsSelectors.getFilter);
   const dispatch = useDispatch();
   return (
     <ContactListWrapper>
@@ -14,7 +13,9 @@ export function Filter() {
       <ContactListInput
         type="text"
         value={value}
-        onChange={(event) => dispatch(filterItems(event.target.value))}
+        onChange={(event) =>
+          dispatch(contactsActions.filterItems(event.target.value))
+        }
       />
     </ContactListWrapper>
   );
