@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import logger from "redux-logger";
-import phonebookReducer from "./phonebook/phonebook-reducer";
+import phonebookReducer from "./phonebook/contacts-reducer";
 
 const store = configureStore({
   reducer: {
